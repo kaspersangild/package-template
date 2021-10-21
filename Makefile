@@ -11,10 +11,10 @@ docs:
 	sphinx-apidoc -f -o docs/source package/
 	sphinx-build -b html docs/source docs/build
 
+clean:
+	git clean -Xdf -e \!docs/*
+
 cleandocs:
 	git clean -Xdf docs
-
-clean:
-	git clean -Xdf -e docs
 
 cleanall: clean cleandocs
